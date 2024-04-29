@@ -1,6 +1,5 @@
-package lesson8.classwork;
+package lesson08.classwork;
 
-import javax.swing.*;
 import java.util.Scanner;
 
 public class Main01 {
