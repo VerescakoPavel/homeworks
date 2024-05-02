@@ -33,9 +33,10 @@ public class Pen {
             char currentChar = str.charAt(i);
             if (inkVolume > 0) {
                 System.out.print(inkColor + currentChar + RESET);
-                inkVolume -= (currentChar == ' ') ? 0 : 1;
+                inkVolume -= (currentChar == ' ') ? 0 : 1; // if invisible symbol " ", ink volume will not decrease
             }
         }
+
     }
 
     static void refil() {
@@ -43,6 +44,7 @@ public class Pen {
     }
 
    static void checkInk() {
+       System.out.println();
         System.out.println("Ink remain for " + inkVolume + " letters!" );
     }
 
