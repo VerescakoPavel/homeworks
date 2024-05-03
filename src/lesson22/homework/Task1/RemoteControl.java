@@ -1,4 +1,4 @@
-package lesson22.homework;
+package lesson22.homework.task1;
 
 public class RemoteControl {
     private int frequency;

@@ -1,4 +1,4 @@
-package lesson22.homework;
+package lesson22.homework.task1;
 
 public class TV {
     private int frequency;
