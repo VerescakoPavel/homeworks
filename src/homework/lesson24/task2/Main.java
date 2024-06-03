@@ -19,7 +19,10 @@ public class Main {
         System.out.println("Pls enter an expression (e.g. 4 + 4): ");
         String input = scanner.nextLine().replace(" ", ""); // читаем и избавляем строку от лишних пробелов.
 
-        String[] inputArray = input.split("");
+        String[] inputArray = input.split("(?<=[-+*/])|(?=[-+*/])"); //делим строку на число до знака, знак и число после знака
+        System.out.println(Arrays.toString(inputArray));
+
+
         if (inputArray.length != 3) {
             System.out.println("Something go wrong, pls try again");
             return;
