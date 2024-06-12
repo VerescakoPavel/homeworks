@@ -33,5 +33,6 @@ public class Main {
             System.out.println("Access for " + nadja.getName() + " to " + urls[i] + " is " + (filter.accessAllowance(urls[i], nadja.getUserType()) ? "allowed" : "denied"));
 
         }
+
     }
 }
