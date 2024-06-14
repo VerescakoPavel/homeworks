@@ -69,12 +69,12 @@ public class Main {
 
             reactorTemperatureLast10.add(currentTemperature);
             if (reactorTemperatureHistory.size() >= 10) {
-                System.out.println("Avarage of last 10 temperatures : " + averageTempCalc(reactorTemperatureLast10) + "°C");
+                System.out.println("Average of last 10 temperatures : " + averageTempCalc(reactorTemperatureLast10) + "°C");
                 reactorTemperatureLast10.removeFirst();
             }
             if (reactorTemperatureHistory.size() % 100 == 0) {
                 reactorTemperatureEach100thPstn.add(currentTemperature);
-                System.out.println("Avarage of each 100th temperature messurement : " + averageTempCalc(reactorTemperatureEach100thPstn) + "°C");
+                System.out.println("Average of each 100th temperature messurement : " + averageTempCalc(reactorTemperatureEach100thPstn) + "°C");
             }
 
         }
