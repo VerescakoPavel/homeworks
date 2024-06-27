@@ -1,4 +1,9 @@
-package lesson28;
+package homework.lesson28;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 /*
 Домашнее задание: Решите задачу с использованием коллекций, List, ArrayList, LinkedList Дедлайн по заданию увеличен до 1.5 недель!
 
@@ -17,6 +22,9 @@ Copy
 2. Найти самый выгодный вклад (по наибольшему доходу от вклада)
 3. Найти среднюю прибыль с каждого вклада
 
+
+
+
 !!!Решать с использованием листа (ArrayList или LinkedList)!!!
 Copy
 Дополнительное задание (не обязательное):
@@ -32,8 +40,32 @@ Copy
 2
 1000 2 5                      (1000 евро на 2 года под 5%)
 500 5 10                      (500 евро на 5 лет под 10%)
+
  */
 public class Main {
+    public static void main(String[] args) {
+        List<Double> netProfit = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        int inputAmount;
+        int bestInputAmount;
+        int years;
+        int bestYears;
+        int percents;
+        int bestPercent;
+
+        double profitResult;
+        int numberOfDeposits = scanner.nextInt();
+
+        for (int i = 0; i < numberOfDeposits; i++) {
+            inputAmount = scanner.nextInt();
+            years = scanner.nextInt();
+            percents = scanner.nextInt();
+            profitResult = Calculator.profitCalc(inputAmount,years, percents);
+            System.out.println("Your NET income will be : " + profitResult);
+            netProfit.add(profitResult);
+
+        }
 
 
+    }
 }
